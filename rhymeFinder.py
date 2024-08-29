@@ -7,7 +7,7 @@ counter_naiv = 0
 counter_exact = 0
 
 
-Adonestream=open("/home/notfatnotfunny/Documents/codeIsFun/codingWords/Adone.txt","r",encoding="utf-8")
+Adonestream=open("Adone.txt","r",encoding="utf-8")
 Adonetestocompleto=Adonestream.read()
 
 # Function to extract rhyming words from the text

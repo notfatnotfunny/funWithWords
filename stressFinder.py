@@ -68,7 +68,6 @@ def accent(lettera):
 
 #     return pronunce
 
-
 def wordToStress(parola):
     culo = fetchURL(parola)
 
@@ -204,7 +203,7 @@ def fetchURL(parola, syllabDivision=False):
     
     return culo
 
-parola = 'stupore'
-print(wordToStress(parola))
+parola = 'scoreggia'
+#print(wordToStress(parola))
 # print(treccani(parola))
 

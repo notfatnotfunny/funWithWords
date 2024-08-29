@@ -1,7 +1,7 @@
 import re 
 
 
-with open("/home/notfatnotfunny/Documents/codeIsFun/codingWords/morph-it_048.txt", encoding='latin-1') as morphIt_048:
+with open("morph-it_048.txt", encoding='latin-1') as morphIt_048:
     morphIt = morphIt_048.read()
 
 parole = morphIt.split('\n')
