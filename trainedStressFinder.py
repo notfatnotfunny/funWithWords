@@ -75,7 +75,7 @@ def predict_accent(word):
     return ''.join(accented_word)
 
 # Test the model
-test_word = 'ricoprimento'
+test_word = 'cisterna'
 predicted_word = predict_accent(test_word)
 print(f'{test_word} -> {predicted_word}')
 
