@@ -21,6 +21,6 @@ def accentazione(syllabWord):
 
 f = open('dataset.txt', 'w')
 for i in data:
-    syllabdiv = sf.fetchURL(i, True)
-    if syllabdiv and accentazione(syllabdiv):
-        f.write(i + ',' + accentazione(syllabdiv) + '\n')
+    syllabdiv = sf.fetchURL(i)
+    if syllabdiv:
+        f.write(i + ',' + syllabdiv + '\n')

@@ -203,7 +203,7 @@ def fetchURL(parola, syllabDivision=False):
     
     return culo
 
-parola = 'citta'
-#print(fetchURL(parola, True))
+parola = 'approfittare'
+# print(fetchURL(parola))
 # print(treccani(parola))
 
