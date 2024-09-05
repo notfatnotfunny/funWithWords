@@ -187,7 +187,7 @@ def fetchURL(parola, syllabDivision=False):
     response = requests.get(url)
     html_content = response.content
 
-    soup = BeautifulSoup(html_content, 'html.parser')
+    soup = BeautifulSoup(html_content, 'html.parser') # usa il costruttore per creare un elemento di tipo 'BeautifulSoup'
     script_tag = soup.find('main', id='l-main')
     culo = script_tag.find('span', 'pron')
 
