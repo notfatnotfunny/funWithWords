@@ -16,7 +16,7 @@ g = open('dataset.txt', 'w')
 
 def listaParole():
     res = []
-    for prefix in alfa[9000:9100]:
+    for prefix in alfa:
         url = 'https://www.dizy.com/it/alfa/' + prefix + '?p=1'
         soup = BeautifulSoup(requests.get(url).content, 'html.parser')
         notFound = str(soup).split()
@@ -40,8 +40,7 @@ def listaParole():
                     res.append(word)
                     accWord = sf.fetchURL(word)
                     if accWord:
-                        print(accWord)
                         g.write(word + ',' + accWord + '\n') 
     return res
 
-print(listaParole())
+listaParole()
