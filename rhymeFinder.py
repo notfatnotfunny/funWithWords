@@ -25,7 +25,7 @@ def vocale(lettera):
 def consonante(lettera):
     return lettera in 'bcdfghjklmnpqrstvwxyz'
 
-def naivRhymeFinder(word):
+def naiveRhymeFinder(word):
     rime = word
     for i in range(len(word)-2, 0, -1):
         if vocale(word[i]) and rime == word:
@@ -45,9 +45,9 @@ for word in rhymes:
     if rime == '':
         rime = sf.wordToStress(word)
         if rime == 'porcodio':
-            rime = naivRhymeFinder(word)
+            rime = naiveRhymeFinder(word)
             counter_naiv += 1
-            print("naivRhymeFinder")
+            print("naiveRhymeFinder")
         else:
             counter_exact += 1
             print("exactRhymeFinder")
@@ -58,7 +58,7 @@ for word in rhymes:
     rhyme_dict[sf.rimuoviAccenti(rime)].append(word)
 
 totalCount = counter_naiv + counter_exact
-percentageNaiv = 100*counter_naiv/totalCount
+percentageNaive = 100*counter_naiv/totalCount
 percentageExact = 100*counter_exact/totalCount
 
 
@@ -90,4 +90,4 @@ doc.save(output_path)
 
 print(f"Documento creato: {output_path}")
 print("percentuale risultati esatti: ", percentageExact, '%')
-print("percentuale risultati calcolati: ", percentageNaiv, '%')
+print("percentuale risultati calcolati: ", percentageNaive, '%')
