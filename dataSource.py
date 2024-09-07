@@ -10,13 +10,13 @@ for i in alfabeto:
     for j in alfabeto:
         for k in  alfabeto:
             alfa.append(i+j+k)
-index = alfa.index('spr')
-f = open('data.txt', 'w')
-g = open('dataset.txt', 'w')
+index = alfa.index('sti')
+f = open('data.txt', 'a')
+g = open('dataset.txt', 'a')
 
 def listaParole():
     res = []
-    for prefix in alfa:
+    for prefix in alfa[index:]:
         url = 'https://www.dizy.com/it/alfa/' + prefix + '?p=1'
         soup = BeautifulSoup(requests.get(url).content, 'html.parser')
         notFound = str(soup).split()
@@ -40,7 +40,7 @@ def listaParole():
                     res.append(word)
                     accWord = sf.fetchURL(word)
                     if accWord:
-                        g.write(word + ',' + accWord + '\n') 
+                        g.write(sf.rimuoviAccenti(word) + ',' + accWord + '\n') 
     return res
 
 listaParole()
