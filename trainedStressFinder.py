@@ -22,7 +22,14 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 
-dataX,datay = np.loadtxt('dataset.txt', delimiter=',', dtype = str, encoding='latin-1', unpack = 1)
+def uniqueList(dataList):
+    dataNew = []
+    for i in dataList:
+        if i not in dataNew:
+            dataNew.append(i)
+    return dataNew
+
+dataX,datay = np.loadtxt('dataset.txt', delimiter=',', dtype = str, encoding='utf-8', unpack = 1)
 X = []
 y = []
 # Convert words to character-level features
@@ -75,7 +82,8 @@ def predict_accent(word):
     return ''.join(accented_word)
 
 # Test the model
-test_word = 'inerme'
+print('enter the word to find the stress')
+test_word = input()
 predicted_word = predict_accent(test_word)
 print(f'{test_word} -> {predicted_word}')
 

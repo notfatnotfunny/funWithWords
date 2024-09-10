@@ -10,7 +10,7 @@ for i in alfabeto:
     for j in alfabeto:
         for k in  alfabeto:
             alfa.append(i+j+k)
-index = alfa.index('sti')
+index = alfa.index('vis')
 f = open('data.txt', 'a')
 g = open('dataset.txt', 'a')
 
